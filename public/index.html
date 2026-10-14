@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini File Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <header>
+            <h1>📁 Mini File Manager</h1>
+            <p>Simple file manager built with HTML, CSS, JavaScript, and Node.js.</p>
+        </header>
+
+        <section class="card">
+            <h2>Create / Update File</h2>
+            <form id="fileForm">
+                <label for="filename">File Name</label>
+                <input id="filename" type="text" placeholder="notes.txt" required>
+
+                <label for="content">Content</label>
+                <textarea id="content" placeholder="Write something here..." required></textarea>
+
+                <button type="submit">Save File</button>
+            </form>
+            <p id="message"></p>
+        </section>
+
+        <section class="card">
+            <div class="title-row">
+                <h2>Files</h2>
+                <button id="refreshButton" type="button">Refresh</button>
+            </div>
+            <ul id="fileList"></ul>
+        </section>
+
+        <section class="card">
+            <h2>System Info</h2>
+            <div id="systemInfo">Loading...</div>
+        </section>
+    </main>
+
+    <script src="/app.js"></script>
+</body>
+</html>
